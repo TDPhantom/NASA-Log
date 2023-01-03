@@ -10,12 +10,22 @@ fruits = [
  ]
 
 
+
 fruit_counter = Counter(fruits)
+
+newDict = dict()
+for (key, value) in fruit_counter.items():
+    if value % 2 :
+        newDict[key] = value
+
+
+print(newDict)
+
 
 print(fruit_counter.keys)
 print(fruit_counter.values)
 
-plt.bar(fruit_counter.keys(), fruit_counter.values()) 
+plt.bar(newDict.keys(), newDict.values()) 
 
 plt.show()
 
