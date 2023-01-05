@@ -31,7 +31,7 @@ Filess = Counter(Files)
 
 newDicts = dict()
 for (key, value) in Filess.items():
-    if value > 2500 :
+    if value > 2000 :
         newDicts[key] = value
 
 newDict = dict()
@@ -55,15 +55,19 @@ C = ["Green", "Red" , "Blue" , "Yellow" , 'black' ]
 plt.bar(newDict.keys(), sorted(newDict.values()),color = C ) 
 
 plt.xticks(rotation=30, ha='right')
-plt.title("Ip Addresses", fontdict = font1)
+plt.title("Common Ip Addresses", fontdict = font1)
 plt.xlabel("Ip Addresses", fontdict = font1)
 plt.ylabel("Number of Ip Adresses", fontdict = font2)
 plt.subplots_adjust(bottom=0.312)
 
 plt.show()
 
-plt.bar(newDicts.keys(), sorted(newDicts.values()), color = "red") 
+plt.bar(newDicts.keys(), sorted(newDicts.values()), color = C) 
 plt.xticks(rotation=50, ha='right')
+plt.title("Flies from NASA", fontdict = font1)
+plt.xlabel("Most Common Files", fontdict = font1)
+plt.ylabel( "Files", fontdict = font2)
+plt.subplots_adjust(bottom=0.613)
 
 plt.show()
 
